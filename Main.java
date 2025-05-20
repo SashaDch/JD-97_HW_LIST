@@ -42,10 +42,6 @@ public class Main {
                 case "5":
                     System.out.print("\nВведите последовательность для удаления: ");
                     tasks.removeByKeyword(scanner.nextLine().toLowerCase());
-                    /*
-                    String input = scanner.nextLine().toLowerCase();
-                    tasks.removeIf(task -> task.toLowerCase().contains(input));
-                    */
                     break;
                 default:
                     System.out.println("Неверная опция!");
