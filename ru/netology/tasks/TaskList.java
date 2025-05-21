@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Iterator;
 
 public class TaskList {
-    ArrayList<String> tasks = new ArrayList<>();
+    List<String> tasks = new ArrayList<>();
 
     public void add(String elem) {
         tasks.add(elem);
@@ -26,10 +26,10 @@ public class TaskList {
     }
 
     public void remove(int index) {
-        try {
+        if (index >= 0 && index < tasks.size()) {
             tasks.remove(index);
             System.out.println("Удалено!");
-        } catch (IndexOutOfBoundsException e) {
+        } else {
             System.out.println("Нет дела с таким номером!");
         }
     }
